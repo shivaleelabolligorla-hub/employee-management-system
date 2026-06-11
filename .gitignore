@@ -1,0 +1,22 @@
+# Visual Studio
+.vs/
+
+# Build folders
+bin/
+obj/
+
+# Logs
+Logs/
+
+# User files
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# Publish folders
+publish/
+
+# Test Results
+TestResults/

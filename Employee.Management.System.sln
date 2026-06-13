@@ -36,6 +36,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_Azure_Devops", "04_Azure
 		Sprint_04_Step_05_First_CI_Pipeline.md = Sprint_04_Step_05_First_CI_Pipeline.md
 		Sprint_04_Step_06_Artifacts_And_Deployment_Flow.md = Sprint_04_Step_06_Artifacts_And_Deployment_Flow.md
 		Sprint_04_Step_07_Artifact_Inspection.md = Sprint_04_Step_07_Artifact_Inspection.md
+		Sprint_04_Step_08_IIS_Foundation_And_Website_Setup.md = Sprint_04_Step_08_IIS_Foundation_And_Website_Setup.md
+		Sprint_04_Step_09_Environment_Configuration.md = Sprint_04_Step_09_Environment_Configuration.md
+		Sprint_04_Step_10_Azure_DevOps_Environment_Setup.md = Sprint_04_Step_10_Azure_DevOps_Environment_Setup.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05_Deployment", "05_Deployment", "{383F83ED-D94A-41FF-A257-90DB507DC64B}"

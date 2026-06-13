@@ -1,55 +1,61 @@
-﻿using EMS.Application.DTOs.Authentication;
+﻿using EMS.Application.DTOs.User;
 using EMS.Application.Interfaces.Repositories;
 using EMS.Application.Interfaces.Services;
-using BCrypt.Net;
+using EMS.Domain.Entities;
 
 namespace EMS.Application.Services;
 
-public class AuthService : IAuthService
+public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
-    private readonly IJwtService _jwtService;
+    private readonly IRoleRepository _roleRepository;
 
-    public AuthService(
+    public UserService(
         IUserRepository userRepository,
-        IJwtService jwtService)
+        IRoleRepository roleRepository)
     {
         _userRepository = userRepository;
-        _jwtService = jwtService;
+        _roleRepository = roleRepository;
     }
 
-    public async Task<LoginResponseDto>
-        LoginAsync(LoginRequestDto dto)
+    public async Task<UserResponseDto>
+        CreateUserAsync(CreateUserDto dto)
     {
-        var user =
-            await _userRepository
-                .GetByUsernameAsync(dto.Username);
+        var role =
+            await _roleRepository
+                .GetByIdAsync(dto.RoleId);
 
-        if (user == null)
+        if (role == null)
         {
-            throw new Exception(
-                "Invalid username or password");
+            throw new Exception("Invalid Role");
         }
 
-        var validPassword =
-            BCrypt.Net.BCrypt.Verify(
-                dto.Password,
-                user.PasswordHash);
-
-        if (!validPassword)
+        var user = new User
         {
-            throw new Exception(
-                "Invalid username or password");
-        }
+            Username = dto.Username,
+            Email = dto.Email,
 
-        var token =
-            _jwtService.GenerateToken(user);
+            PasswordHash =
+                BCrypt.Net.BCrypt.HashPassword(
+                    dto.Password),
 
-        return new LoginResponseDto
+            RoleId = dto.RoleId,
+
+            CreatedDate = DateTime.UtcNow,
+
+            IsActive = true
+        };
+
+        await _userRepository.AddAsync(user);
+
+        await _userRepository.SaveChangesAsync();
+
+        return new UserResponseDto
         {
-            Token = token,
-            Expiration =
-                DateTime.UtcNow.AddMinutes(60)
+            Id = user.Id,
+            Username = user.Username,
+            Email = user.Email,
+            RoleName = role.RoleName
         };
     }
 }

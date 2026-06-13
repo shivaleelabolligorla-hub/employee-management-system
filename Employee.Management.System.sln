@@ -18,12 +18,21 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Architecture", "01_Architecture", "{B8D11F7E-F8CB-4E62-A16A-8A27000745C6}"
+	ProjectSection(SolutionItems) = preProject
+		Sprint_01_Project_setup.md = Sprint_01_Project_setup.md
+		Sprint_01_Step02_Project_References.md = Sprint_01_Step02_Project_References.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_Sprint_Notes", "02_Sprint_Notes", "{A8BA65F8-28C1-44BA-A234-FC67AEC6A8C8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_SQL", "03_SQL", "{95217130-6976-422A-9944-EA084702A736}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_Azure_Devops", "04_Azure_Devops", "{F24A064D-7252-44F4-9225-0928FDDA3CB5}"
+	ProjectSection(SolutionItems) = preProject
+		Sprint_04_Step_01_Git_Initialization.md = Sprint_04_Step_01_Git_Initialization.md
+		Sprint_04_Step_02_GitHub_Repository_And_First_Push.md = Sprint_04_Step_02_GitHub_Repository_And_First_Push.md
+		sprint_04_step_03_AzureDevops_Project_setup.md = sprint_04_step_03_AzureDevops_Project_setup.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05_Deployment", "05_Deployment", "{383F83ED-D94A-41FF-A257-90DB507DC64B}"
 EndProject
@@ -60,21 +69,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sprint2", "Sprint2", "{B07E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sprint3_07_06_26", "Sprint3_07_06_26", "{28291C5A-37E1-4B0D-BA3E-B92C7D5794AF}"
 	ProjectSection(SolutionItems) = preProject
+		Sprint_03_Closure.md = Sprint_03_Closure.md
 		Sprint_03_Step_01_02_03_JWT_Foundation.md = Sprint_03_Step_01_02_03_JWT_Foundation.md
 		Sprint_03_Step_04_05_06_07_JWT_Service_And_Authentication_Foundation.md = Sprint_03_Step_04_05_06_07_JWT_Service_And_Authentication_Foundation.md
 		Sprint_03_Step_08_09_10_11_Login_Authentication_Module.md = Sprint_03_Step_08_09_10_11_Login_Authentication_Module.md
+		Sprint_03_Step_12_13_14_15_16_JWT_Middleware_And_Authorization.md = Sprint_03_Step_12_13_14_15_16_JWT_Middleware_And_Authorization.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sprint1", "Sprint1", "{5162D1FD-2397-49CF-B835-789A285A99BD}"
 	ProjectSection(SolutionItems) = preProject
 		Sprint_01_closure_Report.md = Sprint_01_closure_Report.md
-		Sprint_01_Project_setup.md = Sprint_01_Project_setup.md
-		Sprint_01_Step02_Project_References.md = Sprint_01_Step02_Project_References.md
 		Sprint_01_Step_03_Nuget_Packages.md = Sprint_01_Step_03_Nuget_Packages.md
 		Sprint_01_step_04_Database_Configuration.md = Sprint_01_step_04_Database_Configuration.md
 		Sprint_01_Step_05_Migration.md = Sprint_01_Step_05_Migration.md
 		Sprint_01_Step_06_HealthCheckController.md = Sprint_01_Step_06_HealthCheckController.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10_database", "10_database", "{6A33C781-E38E-4BCF-A374-AED213D917A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11_release_Notes", "11_release_Notes", "{72B5D1E8-B553-44FB-84DA-ED75AF328FF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +136,8 @@ Global
 		{B07E4B09-CD36-45DF-9C1C-FD4E07D2BAE4} = {A8BA65F8-28C1-44BA-A234-FC67AEC6A8C8}
 		{28291C5A-37E1-4B0D-BA3E-B92C7D5794AF} = {A8BA65F8-28C1-44BA-A234-FC67AEC6A8C8}
 		{5162D1FD-2397-49CF-B835-789A285A99BD} = {A8BA65F8-28C1-44BA-A234-FC67AEC6A8C8}
+		{6A33C781-E38E-4BCF-A374-AED213D917A8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{72B5D1E8-B553-44FB-84DA-ED75AF328FF7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F3A4338C-3716-432D-AD7A-ACFD8A81FCBC}

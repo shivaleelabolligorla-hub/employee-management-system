@@ -1,6 +1,8 @@
 ﻿using EMS.Application.DTOs.Authentication;
 using EMS.Application.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace EMS.API.Controllers;
 
@@ -25,4 +27,23 @@ public class AuthController : ControllerBase
 
         return Ok(result);
     }
+    [Authorize]
+    [HttpGet("me")]
+    public IActionResult Me()
+    {
+        return Ok(new
+        {
+            UserId =
+                User.FindFirst(
+                    ClaimTypes.NameIdentifier)?.Value,
+
+            Username =
+                User.Identity?.Name,
+
+            Role =
+                User.FindFirst(
+                    ClaimTypes.Role)?.Value
+        });
+    }
+
 }

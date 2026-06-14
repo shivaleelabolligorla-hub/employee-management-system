@@ -73,11 +73,12 @@ stages:
       runOnce:
         deploy:
           steps:
-         - script: |
+          - script: |
               echo "Deploying EMS to DEV Environment"
               echo "Environment = $(EnvironmentName)"
               echo "Issuer = $(JwtIssuer)"
               echo "Audience = $(JwtAudience)"
+            displayName: 'Verify DEV Variables'
 
 # -----------------------
 # QA STAGE
@@ -99,10 +100,11 @@ stages:
         deploy:
           steps:
           - script: |
-               echo "Deploying EMS to QA Environment"
-               echo "Environment = $(EnvironmentName)"
-               echo "Issuer = $(JwtIssuer)"
-               echo "Audience = $(JwtAudience)"
+              echo "Deploying EMS to QA Environment"
+              echo "Environment = $(EnvironmentName)"
+              echo "Issuer = $(JwtIssuer)"
+              echo "Audience = $(JwtAudience)"
+            displayName: 'Verify QA Variables'
 
 # -----------------------
 # PROD STAGE
@@ -123,8 +125,9 @@ stages:
       runOnce:
         deploy:
           steps:
-         - script: |
+          - script: |
               echo "Deploying EMS to PROD Environment"
               echo "Environment = $(EnvironmentName)"
               echo "Issuer = $(JwtIssuer)"
               echo "Audience = $(JwtAudience)"
+            displayName: 'Verify PROD Variables'

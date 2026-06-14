@@ -74,10 +74,10 @@ stages:
         deploy:
           steps:
          - script: |
-    echo "Deploying EMS to DEV Environment"
-    echo "Environment = $(EnvironmentName)"
-    echo "Issuer = $(JwtIssuer)"
-    echo "Audience = $(JwtAudience)"
+              echo "Deploying EMS to DEV Environment"
+              echo "Environment = $(EnvironmentName)"
+              echo "Issuer = $(JwtIssuer)"
+              echo "Audience = $(JwtAudience)"
 
 # -----------------------
 # QA STAGE
@@ -99,10 +99,10 @@ stages:
         deploy:
           steps:
           - script: |
-    echo "Deploying EMS to QA Environment"
-    echo "Environment = $(EnvironmentName)"
-    echo "Issuer = $(JwtIssuer)"
-    echo "Audience = $(JwtAudience)"
+               echo "Deploying EMS to QA Environment"
+               echo "Environment = $(EnvironmentName)"
+               echo "Issuer = $(JwtIssuer)"
+               echo "Audience = $(JwtAudience)"
 
 # -----------------------
 # PROD STAGE
@@ -124,7 +124,7 @@ stages:
         deploy:
           steps:
          - script: |
-    echo "Deploying EMS to PROD Environment"
-    echo "Environment = $(EnvironmentName)"
-    echo "Issuer = $(JwtIssuer)"
-    echo "Audience = $(JwtAudience)"
+              echo "Deploying EMS to PROD Environment"
+              echo "Environment = $(EnvironmentName)"
+              echo "Issuer = $(JwtIssuer)"
+              echo "Audience = $(JwtAudience)"

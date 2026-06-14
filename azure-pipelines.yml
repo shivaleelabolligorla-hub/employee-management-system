@@ -61,6 +61,9 @@ stages:
   displayName: DEV Environment
   dependsOn: Build
 
+  variables:
+  - group: EMS-DEV
+
   jobs:
   - deployment: DeployDEV
     displayName: Deploy To DEV
@@ -70,7 +73,11 @@ stages:
       runOnce:
         deploy:
           steps:
-          - script: echo "Deploying EMS to DEV Environment"
+         - script: |
+    echo "Deploying EMS to DEV Environment"
+    echo "Environment = $(EnvironmentName)"
+    echo "Issuer = $(JwtIssuer)"
+    echo "Audience = $(JwtAudience)"
 
 # -----------------------
 # QA STAGE
@@ -78,6 +85,9 @@ stages:
 - stage: QA
   displayName: QA Environment
   dependsOn: DEV
+
+  variables:
+  - group: EMS-QA
 
   jobs:
   - deployment: DeployQA
@@ -88,7 +98,11 @@ stages:
       runOnce:
         deploy:
           steps:
-          - script: echo "Deploying EMS to QA Environment"
+          - script: |
+    echo "Deploying EMS to QA Environment"
+    echo "Environment = $(EnvironmentName)"
+    echo "Issuer = $(JwtIssuer)"
+    echo "Audience = $(JwtAudience)"
 
 # -----------------------
 # PROD STAGE
@@ -96,6 +110,9 @@ stages:
 - stage: PROD
   displayName: PROD Environment
   dependsOn: QA
+
+  variables:
+  - group: EMS-PROD
 
   jobs:
   - deployment: DeployPROD
@@ -106,4 +123,8 @@ stages:
       runOnce:
         deploy:
           steps:
-          - script: echo "Deploying EMS to PROD Environment"
+         - script: |
+    echo "Deploying EMS to PROD Environment"
+    echo "Environment = $(EnvironmentName)"
+    echo "Issuer = $(JwtIssuer)"
+    echo "Audience = $(JwtAudience)"

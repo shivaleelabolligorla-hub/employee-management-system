@@ -4,8 +4,6 @@ using EMS.Persistence.Context;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using FluentValidation;
-using EMS.Application.Validators;
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 using EMS.Application.Configurations;

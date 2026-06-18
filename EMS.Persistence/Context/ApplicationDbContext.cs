@@ -1,5 +1,4 @@
-﻿using Ems.Domain.Entities;
-using EMS.Domain.Entities;
+﻿using EMS.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 

@@ -1,4 +1,6 @@
-﻿public class Employee
+﻿namespace EMS.Application.DTOs.Employee;
+
+public class UpdateEmployeeDto
 {
     public int Id { get; set; }
 
@@ -18,9 +20,5 @@
 
     public DateTime DateOfJoining { get; set; }
 
-    public bool IsActive { get; set; } = true;
-
-    public DateTime CreatedOn { get; set; }
-
-    public DateTime ModifiedOn { get; set; }
+    public bool IsActive { get; set; }
 }

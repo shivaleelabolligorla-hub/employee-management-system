@@ -1,7 +1,7 @@
-﻿public class Employee
-{
-    public int Id { get; set; }
+﻿namespace EMS.Application.DTOs.Employee;
 
+public class CreateEmployeeDto
+{
     public string EmployeeCode { get; set; } = string.Empty;
 
     public string FirstName { get; set; } = string.Empty;
@@ -17,10 +17,4 @@
     public string Designation { get; set; } = string.Empty;
 
     public DateTime DateOfJoining { get; set; }
-
-    public bool IsActive { get; set; } = true;
-
-    public DateTime CreatedOn { get; set; }
-
-    public DateTime ModifiedOn { get; set; }
 }

@@ -96,6 +96,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10_database", "10_database"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11_release_Notes", "11_release_Notes", "{72B5D1E8-B553-44FB-84DA-ED75AF328FF7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sprint_05", "Sprint_05", "{451AC19E-B9E4-47BB-B46A-BDDE481E3A82}"
+	ProjectSection(SolutionItems) = preProject
+		Sprint_05_Step_04_Employee_DTOs.md = Sprint_05_Step_04_Employee_DTOs.md
+		Sprint_05_Step_1_2_3.md = Sprint_05_Step_1_2_3.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -145,6 +151,7 @@ Global
 		{5162D1FD-2397-49CF-B835-789A285A99BD} = {A8BA65F8-28C1-44BA-A234-FC67AEC6A8C8}
 		{6A33C781-E38E-4BCF-A374-AED213D917A8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{72B5D1E8-B553-44FB-84DA-ED75AF328FF7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{451AC19E-B9E4-47BB-B46A-BDDE481E3A82} = {A8BA65F8-28C1-44BA-A234-FC67AEC6A8C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F3A4338C-3716-432D-AD7A-ACFD8A81FCBC}

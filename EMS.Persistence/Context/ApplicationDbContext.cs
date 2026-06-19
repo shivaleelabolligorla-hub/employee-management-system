@@ -1,4 +1,5 @@
 ﻿using EMS.Domain.Entities;
+using EMS.Persistence.Configurations;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
@@ -17,6 +18,13 @@ public class ApplicationDbContext : DbContext
             typeof(ApplicationDbContext).Assembly);
 
         base.OnModelCreating(modelBuilder);
+       /* modelBuilder.ApplyConfiguration(
+        new RoleConfiguration());
+        modelBuilder.ApplyConfiguration(
+        new UserConfiguration());
+        modelBuilder.ApplyConfiguration(
+        new EmployeeConfiguration());*/
+    
     }
 
     public DbSet<Employee> Employees { get; set; }

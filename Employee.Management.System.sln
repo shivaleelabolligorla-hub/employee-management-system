@@ -100,6 +100,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sprint_05", "Sprint_05", "{
 	ProjectSection(SolutionItems) = preProject
 		Sprint_05_Step_04_Employee_DTOs.md = Sprint_05_Step_04_Employee_DTOs.md
 		Sprint_05_Step_05_Employee_Validation.md = Sprint_05_Step_05_Employee_Validation.md
+		Sprint_05_Step_06_Employee_Configuration.md = Sprint_05_Step_06_Employee_Configuration.md
 		Sprint_05_Step_1_2_3.md = Sprint_05_Step_1_2_3.md
 	EndProjectSection
 EndProject
